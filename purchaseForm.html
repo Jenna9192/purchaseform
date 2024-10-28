@@ -1,0 +1,91 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Sample Purchase Form</title>
+	  <link rel="stylesheet" href="css/style.css">
+	      <!-- HTML code from: http://24ways.org/2009/have-a-field-day-with-html5-forms/ -->
+
+  </head>
+  <body>
+  
+	  <h1>Sample Purchase Form</h1>
+  
+	  <form action="#" method="get" novalidate>
+		  <!-- Your Details -->
+		  	<fieldset>
+			  <legend>Your Details</legend>
+			  <ol>
+				<li><label for="name">Name</label>
+				<input id="name" name="name" type="text" placeholder="First and last name" required autofocus></li>
+	
+				<li><label for="email">Email</label>
+				<input id="email" name="email" type="email" placeholder="example@domain.com" required></li>
+	
+				<li><label for="phone">Phone</label>
+				<input id="phone" name="phone" type="tel" pattern="\d{3}-\d{3}-\d{4}" placeholder="123-456-7890" required></li>
+
+				<li><label for="pass">Password</label>
+				<input id="pass" name="password" type="password" required></li>
+		  	  </ol>
+			</fieldset>
+  
+		  <!-- Delivery Address -->
+		  	<fieldset>
+			  <legend>Delivery Address</legend>
+			  <label for="street">Street Address</label>
+			  <ol>
+				<input id="street" name="street" type="text" placeholder="123 Main St" required></li>
+	
+				<li><label for="city">City</label>
+				<input id="city" name="city" type="text" placeholder="Ann Arbor" required></li>
+	
+				<li><label for="state">State</label>
+				<input id="state" name="state" type="text" placeholder="MI" maxlength="2" required></li>
+	
+				<li><label for="zip">Zip Code</label>
+				<input id="zip" name="zip" type="text" pattern="\d{5}" placeholder="12345" required></li>
+	
+				<li><label for="country">Country</label>
+				<input id="country" name="country" type="text" required></li>
+			  </ol>
+			</fieldset>
+  
+		  <!-- Card Details -->
+		  <fieldset id = "cards">
+			  <legend>Card Details</legend>
+			  <ol>		
+				<li>
+			
+			  <!-- Card Type -->
+			  <fieldset>
+				  <legend>Card Type</legend>
+				  <ol class = "cardtype">
+					<input id="visa" name="cardtype" type="radio" >
+						<label for="visa">VISA</label>
+					<input id="amex" name="cardtype" type="radio">
+						<label for="amex">AmEx</label>
+					<input id="mastercard" name="cardtype" type="radio">
+						<label for="mastercard">Mastercard</label>
+				</ol>
+				</fieldset></li>
+  
+			  <li><label for="cardnumber">Card Number</label>
+			  <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" pattern="\d{13,19}" placeholder="1234 5678 9012 3456" required></li>
+  
+			  <li><label for="secure">Security Code</label>
+			  <input id="secure" name="secure" type="text" inputmode="numeric" pattern="\d{3,4}" placeholder="3-4 digit code" required></li>
+  
+			  <li><label for="namecard">Name on Card</label>
+			  <input id="namecard" name="namecard" type="text" placeholder="Exact name as on the card" required></li>
+			</ol>
+			</fieldset>
+  
+		  <!-- Submit Button -->
+			  <button type="submit">Buy it!</button>
+	  </form>
+  
+  </body>
+  </html>
+  

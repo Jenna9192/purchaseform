@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <title>Sample Purchase Form 2</title>
+     <!-- HTML code from: http://24ways.org/2009/have-a-field-day-with-html5-forms/ -->
+     <!-- form inputs augmented with http://bootstrapformhelpers.com/ -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- 	 <link href="css/bootstrap-form-helpers.min.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+
+  <body>
+
+	<form action = "#" method = "get">
+	<fieldset>
+		<legend>Your details</legend>
+		<ol>
+			<li><label for="name">Name</label>
+			<input id="name" name="name" type="text" placeholder="First and last name" required autofocus></li>
+
+			<li><label for="email">Email</label>
+			<input id="email" name="email" type="email" placeholder="example@domain.com" required></li>
+
+			<li><label for="phone">Phone</label>
+			<input id="phone" name="phone" type="tel" pattern="\d{3}-\d{3}-\d{4}" placeholder="123-456-7890" 
+				class="form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" required></li>
+		
+			<li><label for="pass">Password</label>
+			<input id="pass" name="password" type="password" required></li>
+			</ol>
+	</fieldset>
+	<fieldset>
+		<legend>Delivery address</legend>
+		<ol>
+			<li><label for="street">Street</label>
+			<input id="street" name="street" type="text" placeholder="123 Main St" required></li>
+
+			<li><label for="city">City</label>
+			<input id="city" name="city" type="text" placeholder="Ann Arbor" required></li>
+
+     		<li><label>State: <select id="state" name="state" type="text" placeholder="MI" maxlength="2"
+					class="form-control bfh-states" data-country="US" data-state="MI" required></select></label>
+     
+			<li><label for="zip">Zip Code</label>
+			<input id="zip" name="zip" type="text" pattern="\d{5}" placeholder="12345" required></li>
+
+			<li><label for="country">Country</label>
+			<input id="country" name="country" type="text" 
+				class="bfh-countries" data-country="US" required></li>
+     	</ol>
+    </fieldset>
+  	<fieldset id = "cards">
+		<legend>Card details</legend>
+		<ol>		
+			<li>
+				<fieldset>
+					<legend>Card type</legend>
+					<ol class = "cardtype">
+					<input id="visa" name="cardtype" type="radio" >
+						<label for="visa">VISA</label>
+					<input id="amex" name="cardtype" type="radio">
+						<label for="amex">AmEx</label>
+					<input id="mastercard" name="cardtype" type="radio">
+						<label for="mastercard">Mastercard</label>
+				</ol>
+				</fieldset>
+			</li>
+			<li><label for="cardnumber">Card Number</label>
+			  <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" pattern="\d{13,19}" placeholder="1234 5678 9012 3456" required></li>
+  
+			  <li><label for="secure">Security Code</label>
+			  <input id="secure" name="secure" type="text" inputmode="numeric" pattern="\d{3,4}" placeholder="3-4 digit code" required></li>
+  
+			  <li><label for="namecard">Name on Card</label>
+			  <input id="namecard" name="namecard" type="text" placeholder="Exact name as on the card" required></li>
+			</ol>
+			</fieldset>
+  
+		  <!-- Submit Button -->
+			  <button type="submit">Buy it!</button>
+	  </form>
+
+
+
+
+   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-formhelpers.min.js"></script>
+
+</body>
+</html>
+

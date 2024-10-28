@@ -1,0 +1,92 @@
+/* GENERAL APPEARANCE */
+html, body, h1, form, fieldset, legend, ol, li {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #ffffff;
+	color: #111111;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: .5%;
+}
+
+form{
+	background: #03a9f4;
+	border-radius: 2%;
+	padding: 2%;
+	width: 80%;
+	margin: auto;
+}
+
+ol{
+	list-style-type: none;
+}
+/* Style the list items*/
+form ol li {
+	background: #94cce5;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: .5px;
+	/* border-radius: 10%;	Remove this and make new rules */
+	padding: 1% 2%;
+	margin-bottom: .5px;
+}
+
+form ol ol li {
+	background: none;
+	border: none;
+}
+
+.cardtype label{
+	display: inline;
+}
+
+
+/*Add a counter to the elements */
+form{
+	counter-reset: fieldsets;
+}
+
+form > fieldset > legend:before {
+	content: "Step " counter(fieldsets) ": ";
+	counter-increment: fieldsets;
+}
+
+/*payment formatting */
+form fieldset fieldset label {
+	background:none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0 0 0 30px;
+	width: auto;
+}
+form label[for=visa] {
+	background-image: url("../img/visa.gif");
+}
+form label[for=amex] {
+	background-image: url("../img/amex.gif");
+}
+form label[for=mastercard] {
+	background-image: url("../img/mastercard.gif");
+}
+
+button[type="submit"] {
+	cursor: wait;
+}
+
+
+/* This is the code you should have students write*/
+/*** BEGIN HERE ***/
+/*Make sure to comment out line 32 above*/
+
+@media screen and (prefers-reduced-motion: reduce){
+	button[type="submit"] {
+		cursor: crosshair;
+	  }
+}
+
+
+
+
+/*** END HERE ***/
